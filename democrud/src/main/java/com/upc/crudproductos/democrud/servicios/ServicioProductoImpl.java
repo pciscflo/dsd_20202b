@@ -4,6 +4,7 @@ import com.upc.crudproductos.democrud.entidades.Producto;
 import com.upc.crudproductos.democrud.repositorio.RepositorioProducto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 @Service
@@ -23,6 +24,7 @@ public class ServicioProductoImpl implements ServicioProducto{
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class) //CORS, SAGA, COLAS = KAFKA
     public Producto crearProducto(Producto producto) {
         return repositorioProducto.save(producto);
     }

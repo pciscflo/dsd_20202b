@@ -3,7 +3,9 @@ package com.upc.crudproductos.democrud.facade;
 import com.upc.crudproductos.democrud.entidades.Producto;
 import com.upc.crudproductos.democrud.servicios.ServicioProducto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -26,7 +28,13 @@ public class ProductoFacadeImpl implements ProductoFacade{
 
     @PutMapping("/producto")
     public Producto actualizarProducto(@RequestBody  Producto producto) {
-        return servicioProducto.actualizarProducto(producto);
+        Producto p =null;
+        try {
+            p  = servicioProducto.actualizarProducto(producto);
+        }catch (Exception e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"No se puedo actualizar, sorry");
+        }
+        return p;
     }
 
     @GetMapping("/producto/{codigo}") //localhost:8080/api/producto/12
