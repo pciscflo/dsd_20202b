@@ -19,7 +19,7 @@ public class Socio {
     private String correo;
 
     @Temporal(TemporalType.DATE)
-    @JsonFormat(pattern="dd/MM/yyyy",timezone = "EST") // Ojo
+    @JsonFormat(pattern="dd/MM/yyyy",timezone = "UTC") // Ojo
     private Date fechaNacimiento;
 
     private int dependientes;
