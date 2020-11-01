@@ -21,7 +21,7 @@ public class Socio implements Serializable {
 
     @Column
     @Temporal(TemporalType.DATE)
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "dd/MM/yyyy", timezone = "EAST")
     private Date fechaNacimiento;
 
     private int dependientes;
