@@ -30,10 +30,6 @@ public class ServiceSocioDAOImpl implements ServiceSocioDAO {
         return (List<Socio>) repositorioSocio.findAll();
     }
 
-    public double calcularAdicional(Socio socio) {
-        return 300 * socio.getDependientes();
-    }
-
     public Socio actualizar(Socio socio) {
         Socio s = repositorioSocio.findById(socio.getCodigo()).get();
         if (s != null) {
