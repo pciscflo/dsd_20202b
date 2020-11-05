@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 public class ServiceSocioDAOImpl implements ServiceSocioDAO {
-    @Autowired // inyecta
+    @Autowired // inject
     private RepositorioSocio repositorioSocio;
 
     //Wrapper
