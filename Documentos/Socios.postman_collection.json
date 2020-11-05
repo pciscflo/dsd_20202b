@@ -31,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"dni\": \"66666666\",\r\n        \"nombre\": \"Cesar\",\r\n        \"direccion\": \"Peter 1111\",\r\n        \"correo\": \"peter@gmail.com\",\r\n        \"fechaNacimiento\": \"10/12/2019\",\r\n        \"dependientes\": 1\r\n}",
+					"raw": "{\r\n        \"dni\": \"23232323\",\r\n        \"nombre\": \"Silvia\",\r\n        \"direccion\": \"Silvia 888\",\r\n        \"correo\": \"silvia@gmail.com\",\r\n        \"fechaNacimiento\": \"10/02/1978\",\r\n        \"dependientes\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -58,7 +58,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/cuota/dni/88888888",
+					"raw": "localhost:8080/api/cuota/dni/23232323",
 					"host": [
 						"localhost"
 					],
@@ -67,7 +67,7 @@
 						"api",
 						"cuota",
 						"dni",
-						"88888888"
+						"23232323"
 					]
 				}
 			},
@@ -130,35 +130,6 @@
 						"cuota",
 						"codigo",
 						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Crear Producto",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"descripcion\" : \"Fanta\",\r\n    \"precio\" : 2.8\r\n\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/api/producto",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"producto"
 					]
 				}
 			},
