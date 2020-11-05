@@ -24,6 +24,11 @@ public class SociosCoreRestImpl implements SociosCoreRest{
         return serviceSocioCore.calcularCuota(dni);
     }
 
+    @GetMapping("/cuota/dnisocio")
+    public double calcularCuota(@RequestBody Socio socio) {
+        return serviceSocioCore.calcularCuota(socio.getDni());
+    }
+
     @GetMapping("/sociosCuotas")
     public List<Socio> obtenerReporteSociosCuotas() {
         return serviceSocioCore.obtenerReporteSocioCuotas();
